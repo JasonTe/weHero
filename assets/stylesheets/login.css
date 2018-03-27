@@ -116,7 +116,7 @@ body {
 	min-width: 100%;
 	grid-template-columns: 50% 50%;
 	grid-template-rows: 1fr 44px;
-	grid-template-areas: "signup description"
+	grid-template-areas: "description signup"
 											 "login-nav login-nav"
 }
 
@@ -134,7 +134,34 @@ body {
 	background-color:white;
 	grid-area: login-nav;
 }
+/*
+  ========================================
+  Description
+  ========================================
+*/
+.description {
+  background: url("https://cdn.dribbble.com/users/119935/screenshots/2029879/bamaxgif3.gif");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  display: flex;
+}
 
+.description-content{
+  margin: auto;
+  font-size: 25px;
+  color: black;
+  font-weight: 700;
+}
+.content {
+  margin: 20px;
+}
+
+.img-content {
+  height: 30px;
+  width: 30px;
+  margin-right: 20px;
+}
 /*
   ========================================
   Navigation
