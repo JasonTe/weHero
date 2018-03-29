@@ -221,17 +221,25 @@ body {
   Sign Me Up
   ========================================
 */
+.title {
+  display: flex;
+}
+.icon {
+  height: 60px;
+  width: 60px;
+  padding: 10px;
+}
+.weHero {
+  font-weight: bold;
+  color: #54d3df;
+}
 .signmeup {
   display: grid;
   width: 370px;
   margin: 0 auto;
 }
 
-.signupTitle {
-  font-weight: bold;
-}
-
-.signupTitle {
+.signup-title{
   font-weight: bold;
 }
 
