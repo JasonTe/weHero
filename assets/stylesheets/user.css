@@ -105,6 +105,19 @@ body {
 }
 /*
   ========================================
+  Links
+  ========================================
+*/
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration:none;
+}
+/*
+  ========================================
   Layout
   ========================================
 */
@@ -127,7 +140,7 @@ body {
 .dashboard {
   grid-area: dashboard;
   display: grid;
-  grid-template-rows: 1fr 10px 2fr;
+  grid-template-rows: 209px 10px 550px;
   grid-template-areas: "profile"
                        "empty"
                        "trends";
@@ -198,14 +211,28 @@ body {
   height:46px;
   line-height: 46px;
 }
+.navs:hover, .navs:active, .navs:visited {
+  border-bottom:1px solid #54d3df;
+}
+
 .nav-icon {
   position: relative;
   top:6px;
 }
 .nav-icon {
+  background: #54d3df;
   height: 25px;
   width: 25px;
   border-radius: 100px;
+}
+
+.nav-link {
+  color: #14171a;
+  font-size: 13px;
+  font-weight: bold;
+}
+.nav-link:hover, .nav-link:active {
+  color: #54d3df;
 }
 
 .bayicon {
@@ -255,6 +282,8 @@ body {
   outline: none;
 }
 
+
+/*
 /*
   ========================================
   Mobile/Tablet
@@ -262,6 +291,11 @@ body {
 */
 
 @media screen and (max-width: 940px) {
+  /*
+  ========================================
+  Navigation
+  ========================================
+  */
   .navs {
     width: 46px;
   }
@@ -269,14 +303,9 @@ body {
     display: none;
   }
   .search {
-   
     width: 100px;
-   
   }
-  .search:focus {
-    
+  .search:focus { 
     width: 100px;
-   
-   
   }
 }
