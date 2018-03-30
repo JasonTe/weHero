@@ -258,6 +258,8 @@ a:hover {
   outline: none;
 }
 .user-icon {
+  border-radius: 100px;
+  background: #54d3df;
   margin-right: 15px;
 }
 
