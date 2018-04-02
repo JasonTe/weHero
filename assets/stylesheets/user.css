@@ -94,6 +94,7 @@ body {
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 14px;
   color:#000;
+  background:#e6ecf0;
 }
 
 *,
@@ -125,7 +126,7 @@ a:hover {
 .profile-container {
 	display: grid;
   min-height: 100vh;
-  width: 85%; 
+  width: 80%; 
   margin: 0 auto;
   grid-template-rows: 1fr;
 	grid-template-columns: 1fr 2fr 1fr;
@@ -146,6 +147,7 @@ a:hover {
   margin: 10px;                     
 }
 .profile {
+  background: #fff;
   grid-area: profile;
   display: grid;
   grid-template-rows: 50% 50%;
@@ -160,8 +162,9 @@ a:hover {
   grid-area: profile-card;
 }
 .trends {
-  background: orange;
+  background: #fff;
   grid-area: trends;
+  margin-top: 10px;
 }
 /*
   ========================================
@@ -202,10 +205,11 @@ a:hover {
   ========================================
 */
 .profile-nav { 
-  border-bottom:1px solid #e6ecf0;
+  border-bottom:1px solid rgba(0,0,0,0.25);
+  background:#fff;
 }
 .user-nav {	
-  width:85%;
+  width:80%;
   display:flex;
   margin: 0 auto;
   height: 46px;
@@ -337,17 +341,54 @@ a:hover {
 }
 /*
   ========================================
+  Trends
+  ========================================
+*/
+.trends-container {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin: 15px auto;
+  height: 100%;
+  width: 90%;
+}
+.trends-context {
+  display: flex;
+  align-items: center;
+}
+.context-divider {
+  margin: 0 10px;
+}
+.trends-context > h4 {
+  margin: 0;
+  font-weight: bold;
+}
+.trends-context > a {
+  color: #54d3df;
+}
+.trends-list {
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+}
+.trend-link {
+  color:#54d3df;
+  font-weight: bold;
+  font-size: 14px;
+}
+/*
+  ========================================
   Mobile/Tablet
   ========================================
 */
-@media screen and (max-width: 940px) {
+@media screen and (max-width: 1190px) {
   /*
   ========================================
   Layout
   ========================================
   */
   .profile-container {
-    width: 100%;
+    width: 95%;
     grid-template-rows: 1fr 1fr;
 	  grid-template-columns: 1fr 2fr;
     grid-template-areas: "dashboard main"
@@ -362,7 +403,7 @@ a:hover {
   ========================================
   */
   .user-nav {	
-    width:100%;
+    width:95%;
   }
   .navs {
     width: 30px;
@@ -376,5 +417,14 @@ a:hover {
   }
   .search:focus { 
     width: 100px;
+  }
+  /*
+  ========================================
+  Profile Card
+  ========================================
+  */
+  .user-card {
+    left: 15px;
+    bottom: 130px;
   }
 }
