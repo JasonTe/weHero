@@ -58,7 +58,7 @@ h1, h2, h3, h4 {
   color: #000;
 }
 h1, h3, h4, h5, p {
-  margin-bottom: 22px;
+  margin-bottom: 10px;
 }
 h1 {
   font-size: 30px;
@@ -124,8 +124,8 @@ a:hover {
 
 .profile-container {
 	display: grid;
-	min-height: 100vh;
-  width: 70%; 
+  min-height: 100vh;
+  width: 85%; 
   margin: 0 auto;
   grid-template-rows: 1fr;
 	grid-template-columns: 1fr 2fr 1fr;
@@ -140,14 +140,24 @@ a:hover {
 .dashboard {
   grid-area: dashboard;
   display: grid;
-  grid-template-rows: 209px 10px 550px;
+  grid-template-rows: 209px 550px;
   grid-template-areas: "profile"
-                       "empty"
                        "trends";
+  margin: 10px;                     
 }
 .profile {
-  background: yellow;
   grid-area: profile;
+  display: grid;
+  grid-template-rows: 50% 50%;
+  grid-template-areas:"filler" 
+                      "profile-card";                    
+}
+.profile-filler {
+  background:#54d3df;
+  grid-area: filler;
+}
+.profile-card {
+  grid-area: profile-card;
 }
 .trends {
   background: orange;
@@ -161,6 +171,7 @@ a:hover {
 .main {
   background: blue;
   grid-area: main;
+  margin-top: 10px;
 }
 
 /*
@@ -171,10 +182,10 @@ a:hover {
 .follow {
   grid-area: follow;
   display: grid;
-  grid-template-rows: 30% 20px 40%;
+  grid-template-rows: 30%  40%;
   grid-template-areas: "follow-recommendation"
-                       "empty"
                        "side-nav";
+  margin: 10px;
 }
 
 .follow-recommendation {
@@ -192,10 +203,9 @@ a:hover {
 */
 .profile-nav { 
   border-bottom:1px solid #e6ecf0;
-  margin-bottom: 10px;
 }
 .user-nav {	
-  width:70%;
+  width:85%;
   display:flex;
   margin: 0 auto;
   height: 46px;
@@ -214,7 +224,6 @@ a:hover {
 .navs:hover, .navs:active, .navs:visited {
   border-bottom:1px solid #54d3df;
 }
-
 .nav-icon {
   position: relative;
   top:6px;
@@ -225,7 +234,6 @@ a:hover {
   width: 25px;
   border-radius: 100px;
 }
-
 .nav-link {
   color: #14171a;
   font-size: 13px;
@@ -234,7 +242,6 @@ a:hover {
 .nav-link:hover, .nav-link:active {
   color: #54d3df;
 }
-
 .bayicon {
   margin: 0 auto;
   height: 25px;
@@ -283,23 +290,83 @@ a:hover {
   border-radius: 100px;
   outline: none;
 }
-
-
 /*
+  ========================================
+  Profile Card
+  ========================================
+*/
+.baycard {
+  position: relative;
+}
+.baymax {
+  width: 75px;
+  height: 75px;
+  position: relative;
+  bottom: 40px;
+  left: 10px;
+  border-radius: 100px;
+  border:5px solid #fff;
+}
+.user-card {
+  position: absolute;
+  left: 90px;
+  width: 100px;
+  bottom: 35px;
+}
+.baycard-id {
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: bold;
+}
+.baycard-userid {
+  font-style: italic;
+}
+.falala {
+  position: relative;
+  bottom: 20px;
+  left: 15px;
+}
+.falala>h5 {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #657786;
+}
+.falala-count {
+  font-weight: bold;
+  font-size: 15px;
+}
 /*
   ========================================
   Mobile/Tablet
   ========================================
 */
-
 @media screen and (max-width: 940px) {
+  /*
+  ========================================
+  Layout
+  ========================================
+  */
+  .profile-container {
+    width: 100%;
+    grid-template-rows: 1fr 1fr;
+	  grid-template-columns: 1fr 2fr;
+    grid-template-areas: "dashboard main"
+                         "follow main";
+  }
+  .main {
+    margin-right: 10px;
+  }
   /*
   ========================================
   Navigation
   ========================================
   */
+  .user-nav {	
+    width:100%;
+  }
   .navs {
-    width: 46px;
+    width: 30px;
+    margin: 0 5px;
   }
   .nav-link {
     display: none;
