@@ -1,0 +1,430 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+/*
+  ========================================
+  Typography
+  ========================================
+*/
+
+h1, h2, h3, h4 {
+  color: #000;
+}
+h1, h3, h4, h5, p {
+  margin-bottom: 10px;
+}
+h1 {
+  font-size: 30px;
+  line-height: 34px;
+}
+h2 {
+  font-size: 24px;
+  line-height: 30px;
+}
+h3 {
+  font-size: 21px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 14px; 
+}
+strong {
+  font-weight: 400;
+}
+cite,
+em {
+  font-style: italic;
+}
+
+/*
+  ========================================
+  Custom styles
+  ========================================
+*/
+body {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  color:#000;
+  background:#e6ecf0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+/*
+  ========================================
+  Links
+  ========================================
+*/
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration:none;
+}
+/*
+  ========================================
+  Layout
+  ========================================
+*/
+
+.profile-container {
+	display: grid;
+  min-height: 100vh;
+  width: 80%; 
+  margin: 0 auto;
+  grid-template-rows: 1fr;
+	grid-template-columns: 1fr 2fr 1fr;
+	grid-template-areas: "dashboard main follow";
+}
+
+/*
+  ========================================
+  Dashboard Layout
+  ========================================
+*/
+.dashboard {
+  grid-area: dashboard;
+  display: grid;
+  grid-template-rows: 209px 550px;
+  grid-template-areas: "profile"
+                       "trends";
+  margin: 10px;                     
+}
+.profile {
+  background: #fff;
+  grid-area: profile;
+  display: grid;
+  grid-template-rows: 50% 50%;
+  grid-template-areas:"filler" 
+                      "profile-card";                    
+}
+.profile-filler {
+  background:#54d3df;
+  grid-area: filler;
+}
+.profile-card {
+  grid-area: profile-card;
+}
+.trends {
+  background: #fff;
+  grid-area: trends;
+  margin-top: 10px;
+}
+/*
+  ========================================
+  Main Layout
+  ========================================
+*/
+.main {
+  background: blue;
+  grid-area: main;
+  margin-top: 10px;
+}
+
+/*
+  ========================================
+  Follow Layout
+  ========================================
+*/
+.follow {
+  grid-area: follow;
+  display: grid;
+  grid-template-rows: 30%  40%;
+  grid-template-areas: "follow-recommendation"
+                       "side-nav";
+  margin: 10px;
+}
+
+.follow-recommendation {
+  grid-area: follow-recommendation;
+  background-color: pink;
+}
+.side-nav {
+  grid-area: side-nav;
+  background: lavender;
+}
+/*
+  ========================================
+  Navigation
+  ========================================
+*/
+.profile-nav { 
+  border-bottom:1px solid rgba(0,0,0,0.25);
+  background:#fff;
+}
+.user-nav {	
+  width:80%;
+  display:flex;
+  margin: 0 auto;
+  height: 46px;
+  align-items: center;
+}
+.nav-list {
+  display: flex;
+}
+.navs:not(last-child) {
+  margin-right: 10px;
+}
+.navs {
+  height:46px;
+  line-height: 46px;
+}
+.navs:hover, .navs:active, .navs:visited {
+  border-bottom:1px solid #54d3df;
+}
+.nav-icon {
+  position: relative;
+  top:6px;
+}
+.nav-icon {
+  background: #54d3df;
+  height: 25px;
+  width: 25px;
+  border-radius: 100px;
+}
+.nav-link {
+  color: #14171a;
+  font-size: 13px;
+  font-weight: bold;
+}
+.nav-link:hover, .nav-link:active {
+  color: #54d3df;
+}
+.bayicon {
+  margin: 0 auto;
+  height: 25px;
+  width: 25px;
+}
+
+/* Forms */
+.search {
+  height: 30px;
+  width: 190px;
+  border-radius: 21px;
+  border: 1px solid #e6ecf0;
+  background-color: #f5f8fa;
+  margin-right: 15px;
+}
+.search:focus {
+  height: 30px;
+  width: 190px;
+  border: 2px solid #54d3df;
+  border-radius: 21px;
+  outline: none;
+}
+.user-icon {
+  border-radius: 100px;
+  background: #54d3df;
+  margin-right: 15px;
+}
+
+/* navbtn */
+.navbtn {
+  font-size: 16px;
+  border: 0;
+  background: #54d3df;
+  text-align: center;
+  height: 36px;
+  line-height: 36px;
+  width: 75px;
+  color: #fff;
+  border-radius: 100px;
+  
+}
+.navbtn:focus {
+  height: 38px;
+  width: 75px;
+  border: 2px solid #54d3df;
+  border-radius: 100px;
+  outline: none;
+}
+/*
+  ========================================
+  Profile Card
+  ========================================
+*/
+.baycard {
+  position: relative;
+}
+.baymax {
+  width: 75px;
+  height: 75px;
+  position: relative;
+  bottom: 40px;
+  left: 10px;
+  border-radius: 100px;
+  border:5px solid #fff;
+}
+.user-card {
+  position: absolute;
+  left: 90px;
+  width: 100px;
+  bottom: 35px;
+}
+.baycard-id {
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: bold;
+}
+.baycard-userid {
+  font-style: italic;
+}
+.falala {
+  position: relative;
+  bottom: 20px;
+  left: 15px;
+}
+.falala>h5 {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #657786;
+}
+.falala-count {
+  font-weight: bold;
+  font-size: 15px;
+}
+/*
+  ========================================
+  Trends
+  ========================================
+*/
+.trends-container {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin: 15px auto;
+  height: 100%;
+  width: 90%;
+}
+.trends-context {
+  display: flex;
+  align-items: center;
+}
+.context-divider {
+  margin: 0 10px;
+}
+.trends-context > h4 {
+  margin: 0;
+  font-weight: bold;
+}
+.trends-context > a {
+  color: #54d3df;
+}
+.trends-list {
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+}
+.trend-link {
+  color:#54d3df;
+  font-weight: bold;
+  font-size: 14px;
+}
+/*
+  ========================================
+  Mobile/Tablet
+  ========================================
+*/
+@media screen and (max-width: 1190px) {
+  /*
+  ========================================
+  Layout
+  ========================================
+  */
+  .profile-container {
+    width: 95%;
+    grid-template-rows: 1fr 1fr;
+	  grid-template-columns: 1fr 2fr;
+    grid-template-areas: "dashboard main"
+                         "follow main";
+  }
+  .main {
+    margin-right: 10px;
+  }
+  /*
+  ========================================
+  Navigation
+  ========================================
+  */
+  .user-nav {	
+    width:95%;
+  }
+  .navs {
+    width: 30px;
+    margin: 0 5px;
+  }
+  .nav-link {
+    display: none;
+  }
+  .search {
+    width: 100px;
+  }
+  .search:focus { 
+    width: 100px;
+  }
+  /*
+  ========================================
+  Profile Card
+  ========================================
+  */
+  .user-card {
+    left: 15px;
+    bottom: 130px;
+  }
+}
