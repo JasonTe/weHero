@@ -185,19 +185,29 @@ a:hover {
 .follow {
   grid-area: follow;
   display: grid;
-  grid-template-rows: 30%  40%;
+  grid-template-rows: 38%  40%;
   grid-template-areas: "follow-recommendation"
                        "side-nav";
   margin: 10px;
 }
-
 .follow-recommendation {
   grid-area: follow-recommendation;
-  background-color: pink;
+  background-color: #fff;
 }
 .side-nav {
   grid-area: side-nav;
   background: lavender;
+}
+.follower:not(:last-child) {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  grid-template-areas: "img-icon follow-me" 
+}
+.img-icon {
+  grid-area: img-icon;
+}
+.follow-me {
+  grid-area: follow-me;
 }
 /*
   ========================================
@@ -278,22 +288,20 @@ a:hover {
 .navbtn {
   font-size: 16px;
   border: 0;
-  background: #54d3df;
+  background: #000;
   text-align: center;
   height: 36px;
   line-height: 36px;
   width: 75px;
   color: #fff;
   border-radius: 100px;
-  
-}
-.navbtn:focus {
-  height: 38px;
-  width: 75px;
-  border: 2px solid #54d3df;
-  border-radius: 100px;
   outline: none;
 }
+.navbtn > a {
+  color: #54d3df;
+  font-weight: bold;
+}
+
 /*
   ========================================
   Profile Card
@@ -341,41 +349,109 @@ a:hover {
 }
 /*
   ========================================
-  Trends
+  Trends/Follow
   ========================================
 */
-.trends-container {
+.container {
   display: flex;
   flex-direction: column;
   align-items: left;
   margin: 15px auto;
-  height: 100%;
   width: 90%;
 }
-.trends-context {
+.context {
   display: flex;
   align-items: center;
 }
 .context-divider {
   margin: 0 10px;
 }
-.trends-context > h4 {
+.context > h4 {
   margin: 0;
   font-weight: bold;
 }
-.trends-context > a {
+.context > a {
   color: #54d3df;
+  font-size: 12px;
 }
+/* Trends */
 .trends-list {
   margin: 10px 0;
   display: flex;
   flex-direction: column;
+}
+.trends-list > span{
+  font-size: 12px;
+  color: grey;
 }
 .trend-link {
   color:#54d3df;
   font-weight: bold;
   font-size: 14px;
 }
+/* follow */
+.follower:not(:last-child) {
+  width: 240px;
+  padding: 10px 0;
+  border-bottom:1px solid #e6ecf0;
+}
+.follower:last-child {
+  margin: 10px 0;
+}
+.fw-icon {
+  height: 48px;
+  width: 48px;
+  border-radius: 100%;
+  margin-right: 10px;
+}
+.disney {
+  background: blue;
+  height: 48px;
+  width:48px;
+  border-radius: 100%;
+  margin-right: 10px;
+}
+.google {
+  height: 30px;
+  margin-right: 10px;
+}
+.follow-name {
+  font-weight: bold;
+}
+.username {
+  font-weight:400;
+  font-size: 12px;
+  color:grey;
+}
+.contacts {
+  font-size: 12px;
+  color:grey;
+}
+.follow-btn {
+  display: block;
+  border: 1px solid #54d3df;
+  width: 80px;
+  height: 25px;
+  border-radius: 30px;
+  outline: none;
+  margin-top: 5px;
+  
+}
+.follow-btn > a{
+  color:#54d3df;
+  font-weight: bold;
+}
+.follow-btn > a:hover{
+  color:#000;
+}
+.follow-btn:hover {
+  height: 25px;
+  width: 80px;
+  background: #9bd6db;
+  color:#fff;
+  font-weight:bold;
+}
+
 /*
   ========================================
   Mobile/Tablet
@@ -426,5 +502,17 @@ a:hover {
   .user-card {
     left: 15px;
     bottom: 130px;
+  }
+  /*
+  ========================================
+  Trends/Follow
+  ========================================
+  */
+  .follow {
+    grid-template-rows: 55%  40%;
+    margin: 0 10px 10px 10px;
+  }
+  .follower:not(:last-child) {
+    width: 100%;
   }
 }
