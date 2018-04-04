@@ -119,113 +119,6 @@ a:hover {
 }
 /*
   ========================================
-  Layout
-  ========================================
-*/
-
-.profile-container {
-	display: grid;
-  min-height: 100vh;
-  width: 80%; 
-  margin: 0 auto;
-  grid-template-rows: 1fr;
-	grid-template-columns: 1fr 2fr 1fr;
-	grid-template-areas: "dashboard main follow";
-}
-
-/*
-  ========================================
-  Dashboard Layout
-  ========================================
-*/
-.dashboard {
-  grid-area: dashboard;
-  display: grid;
-  grid-template-rows: 209px 550px;
-  grid-template-areas: "profile"
-                       "trends";
-  margin: 10px;                     
-}
-.profile {
-  background: #fff;
-  grid-area: profile;
-  display: grid;
-  grid-template-rows: 50% 50%;
-  grid-template-areas:"filler" 
-                      "profile-card";                    
-}
-.profile-filler {
-  background:#54d3df;
-  grid-area: filler;
-}
-.profile-card {
-  grid-area: profile-card;
-}
-.trends {
-  background: #fff;
-  grid-area: trends;
-  margin-top: 10px;
-}
-/*
-  ========================================
-  Main Layout
-  ========================================
-*/
-.main {
-  background: #fff;
-  grid-area: main;
-  margin-top: 10px;
-}
-.main-container {
-  background: #fff;
-  display: grid;
-  width: 95%;
-  margin: 0 auto;
-  height: 100%;
-  grid-template-rows: 60px 1fr;
-  grid-template-areas: "falala-box"
-                      "tweets";                 
-}
-.falala-box {
-  grid-area: falala-box;
-}
-.tweets {
-  grid-area: tweets;
-}
-/*
-  ========================================
-  Follow Layout
-  ========================================
-*/
-.follow {
-  grid-area: follow;
-  display: grid;
-  grid-template-rows: 360px 110px;
-  grid-template-areas: "follow-recommendation"
-                       "side-nav";
-  margin: 10px;
-}
-.follow-recommendation {
-  grid-area: follow-recommendation;
-  background-color: #fff;
-}
-.side-nav {
-  grid-area: side-nav;
-  background: #fff;
-}
-.follower:not(:last-child) {
-  display: grid;
-  grid-template-columns: 60px 1fr;
-  grid-template-areas: "img-icon follow-me" 
-}
-.img-icon {
-  grid-area: img-icon;
-}
-.follow-me {
-  grid-area: follow-me;
-}
-/*
-  ========================================
   Navigation
   ========================================
 */
@@ -295,7 +188,8 @@ a:hover {
 }
 .user-icon {
   border-radius: 100px;
-  background: #54d3df;
+  height: 35px;
+  width: 35px;
   margin-right: 15px;
 }
 
@@ -306,15 +200,71 @@ a:hover {
   background: #000;
   text-align: center;
   height: 36px;
-  line-height: 36px;
   width: 75px;
-  color: #fff;
   border-radius: 100px;
   outline: none;
 }
 .navbtn > a {
   color: #54d3df;
   font-weight: bold;
+  
+}
+.navbtn:hover {
+  background: #54d3df;
+  height: 36px;
+  width: 75px;
+  border-radius: 100px;
+}
+.navbtn > a:hover {
+  color: #fff;
+}
+
+/*
+  ========================================
+  Body Layout
+  ========================================
+*/
+.profile-container {
+	display: grid;
+  min-height: 100vh;
+  width: 80%; 
+  margin: 0 auto;
+  grid-template-rows: 1fr;
+	grid-template-columns: 1fr 2fr 1fr;
+	grid-template-areas: "dashboard main follow";
+}
+/*
+  ========================================
+  Dashboard Layout
+  ========================================
+*/
+.dashboard {
+  grid-area: dashboard;
+  display: grid;
+  grid-template-rows: 209px 550px;
+  grid-template-areas: "profile"
+                       "trends";
+  margin: 10px;                     
+}
+.profile {
+  background: #fff;
+  grid-area: profile;
+  display: grid;
+  grid-template-rows: 50% 50%;
+  grid-template-areas:"filler" 
+                      "profile-card";                    
+}
+.profile-filler {
+  background:#54d3df;
+  grid-area: filler;
+}
+.profile-card {
+  grid-area: profile-card;
+}
+.trends {
+  background: #fff;
+  grid-area: trends;
+  margin-top: 10px;
 }
 
 /*
@@ -356,12 +306,13 @@ a:hover {
 .falala>h5 {
   margin-bottom: 5px;
   font-weight: bold;
-  color: #657786;
+  color: hsl(207, 14%, 46%);
 }
 .falala-count {
   font-weight: bold;
   font-size: 15px;
 }
+
 /*
   ========================================
   Trends/Follow
@@ -469,6 +420,95 @@ a:hover {
 
 /*
   ========================================
+  Main Layout
+  ========================================
+*/
+.main {
+  background: #fff;
+  grid-area: main;
+  margin: 10px;
+  display: grid;
+  grid-template-rows: 60px 1fr;
+  grid-template-areas: "falala-box"
+                      "tweets";                 
+}
+.falala-box {
+  grid-area: falala-box;
+  background: #bcf2f7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom:1px solid rgba(0,0,0,0.25); 
+}
+.tweets {
+  grid-area: tweets;
+}
+/*
+  ========================================
+  Main
+  ========================================
+*/
+.input {
+  margin-left: 15px;
+}
+.message {
+  height: 35px;
+  width: 440px;
+  border-radius: 5px;
+  border: 1px solid #e6ecf0;
+  background-color: #f5f8fa;
+}
+.input-btn {
+  height: 35px;
+  width: 60px;
+  border-radius: 30px;
+  margin: 0 10px;
+}
+.input-btn > a {
+  color: grey;
+  font-size: 13px;
+  font-weight: bold;
+}
+.input-btn:hover {
+  background: #000;
+}
+.input-btn:hover > a {
+  color: #b8f1f6;
+}
+/*
+  ========================================
+  Follow Layout
+  ========================================
+*/
+.follow {
+  grid-area: follow;
+  display: grid;
+  grid-template-rows: 360px 110px;
+  grid-template-areas: "follow-recommendation"
+                       "side-nav";
+  margin: 10px;
+}
+.follow-recommendation {
+  grid-area: follow-recommendation;
+  background-color: #fff;
+}
+.side-nav {
+  grid-area: side-nav;
+  background: #fff;
+}
+.follower:not(:last-child) {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  grid-template-areas: "img-icon follow-me" 
+}
+.img-icon {
+  grid-area: img-icon;
+}
+.follow-me {
+  grid-area: follow-me;
+}
+/*
+  ========================================
   Footer Nav
   ========================================
 */
@@ -489,6 +529,7 @@ a:hover {
 .footer-nav > li> a {
   color:grey;
 }
+
 /*
   ========================================
   Mobile/Tablet
