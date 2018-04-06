@@ -426,11 +426,13 @@ a:hover {
 .main {
   background: #fff;
   grid-area: main;
-  margin: 10px;
+  margin-top: 10px;
+  height: 1550px;
   display: grid;
   grid-template-rows: 60px 1fr;
   grid-template-areas: "falala-box"
-                      "tweets";                 
+                      "tweets";  
+                                   
 }
 .falala-box {
   grid-area: falala-box;
@@ -442,6 +444,7 @@ a:hover {
 }
 .tweets {
   grid-area: tweets;
+  overflow: scroll;
 }
 /*
   ========================================
@@ -451,9 +454,17 @@ a:hover {
 .input {
   margin-left: 15px;
 }
+.input-message {
+  display: flex; 
+  flex-shrink: 0;
+  flex-grow: 1;
+}
+.box {
+  width: 100%;
+}
 .message {
+  width: 100%;
   height: 35px;
-  width: 440px;
   border-radius: 5px;
   border: 1px solid #e6ecf0;
   background-color: #f5f8fa;
@@ -474,6 +485,50 @@ a:hover {
 }
 .input-btn:hover > a {
   color: #b8f1f6;
+}
+/* FEED */
+.tweet-feed,
+.tweet-feed-filter{
+  height: 97%;
+  width: 95%;
+  margin: 15px;
+}
+.fala-container {
+  display:grid;
+  grid-template-columns: 60px 1fr;
+  grid-template-rows: 25px 1fr; 
+  grid-template-areas: "fala-icon fala-name"
+                       "fala-icon fala-message";
+  margin-bottom: 15px;
+}  
+.fala-icon {
+  grid-area: fala-icon;
+}
+.fala-name {
+  grid-area: fala-name;
+}
+.fala-message {
+  grid-area: fala-message;
+}
+.icon-user {
+  height:50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  background: #54d3df;
+}
+.fala-username {
+  text-transform: capitalize;
+  font-weight: bold;
+  color: black;
+}
+.usertime {
+  color:rgb(92, 91, 91);
+}
+.fala-image {
+  width: 95%;
 }
 /*
   ========================================

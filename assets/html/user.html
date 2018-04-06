@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>weHero</title>
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="../stylesheets/user.css">
   </head>
   <body>
+
     <!-- NAVIGATION -->
     <nav class = "profile-nav">
       <div class = "user-nav">
@@ -51,7 +53,7 @@
         <button class = "navbtn"><a href ="#">Falala</a></button>
       </div>
     </nav>
-
+ 
     <!-- BODY -->
     <div class = "profile-container">
       <!-- dashboard -->
@@ -133,7 +135,7 @@
             <img class = "input user-icon" src =  "../img/founder.png">
           </div>
           <div class = "input-message">
-            <form>
+            <form class = "box">
               <input class = "message" type = "text" placeholder="Whats happening?"/>
             </form>
           </div>
@@ -142,6 +144,9 @@
         <div class = "tweets">
           <div class = "tweet-feed">
 
+          </div>
+          <div class = "tweet-feed-filter">
+            
           </div>
         </div>
       </section>
@@ -233,5 +238,10 @@
         </footer> 
       </aside>
     </div>
+  <!-- JavaScript -->
+  <script src="../js/jquery.js"></script>
+  <script src="../js/moment.min.js"></script>
+  <script src="../js/fala-generator.js"></script>
+  <script src="../js/falala.js"></script>
   </body>
 </html>
