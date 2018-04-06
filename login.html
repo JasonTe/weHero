@@ -16,13 +16,13 @@
       <!-- Login and Sign Up -->
       <div class = "login">
         <div class = "members">
-          <input class ="user" type = "text" name = "username" placeholder= "Username">
+          <input class ="user" id = "userid" type = "text" name = "username" placeholder= "Username">
           <div class = "password">
-            <input class ="user" type = "password" name = "password" placeholder= "Password">
+            <input class ="user" id = "userpw" type = "password" name = "password" placeholder= "Password">
             <a class = "forgotpw" href="#">Forgot password?</a>
           </div>
           
-          <button class = "btn signin"> Log in</button>
+          <a class = "link" href = "#"><button class = "btn signin">Log in</button></a> 
         </div> 
       </div>
     
@@ -75,5 +75,8 @@
     </nav> 
   </div>
   
+  <!-- JavaScript -->
+  <script src="assets/js/jquery.js"></script>
+  <script src="assets/js/login.js"></script>
   </body>
 </html>

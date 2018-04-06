@@ -96,6 +96,8 @@ button {
   border: 1px solid #83b5a3;
   padding: 0 15px;
   font-weight: bold;
+  height: 100%;
+  outline: none;
 }
 
 .newuserbtn {
@@ -110,6 +112,7 @@ button:hover {
   border: 1px solid #b91e1a;
   color:white;
 }
+
 /*
   ========================================
   Custom styles

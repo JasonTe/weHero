@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>weHero</title>
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="../stylesheets/user.css">
   </head>
   <body>
+
     <!-- NAVIGATION -->
     <nav class = "profile-nav">
       <div class = "user-nav">
@@ -28,7 +30,8 @@
             <a href = "#"><img class = "nav-icon" src ="../img/usericons/notification.png"></a>
             <a class = "nav-link" href = "#">Notification</a>
           </div>
-          <!-- Moments -->
+
+          <!-- Message -->
           <div class = "navs">
             <a href = "#"><img class = "nav-icon" src ="../img/usericons/message.png"></a>
             <a class = "nav-link" href = "#">Messages</a>
@@ -44,14 +47,14 @@
         </form>
   
         <!-- User Icon -->
-        <a href = "#"><img class = "user-icon" src =  "../img/usericons/user.png"></a>
-
+        <a href = "#"><img class = "user-icon" src =  "../img/founder.png"></a>
+        <button class = "logoff"><a href = "../../login.html">Log off</a></button>
         <!-- Button -->
-        <button class = "navbtn">Falala</button>
+        <button class = "navbtn"><a href ="#">Falala</a></button>
       </div>
     </nav>
-
-    <!-- MAIN -->
+ 
+    <!-- BODY -->
     <div class = "profile-container">
       <!-- dashboard -->
       <aside class = "dashboard">
@@ -73,8 +76,8 @@
           </div>
         </div>
         <div class = "trends">
-          <div class = "trends-container">
-            <div class = "trends-context">
+          <div class = "container">
+            <div class = "context">
               <h4>Trends for you</h4>
               <span class = "context-divider">·</span>
               <a href = "#"> Change</a>
@@ -124,22 +127,93 @@
           
         </div>
       </aside>
+
       <!-- Main Feed -->
       <section class = "main">
-        
+        <div class = "falala-box">
+          <div class = "main-user">
+            <img class = "input user-icon" src =  "../img/founder.png">
+          </div>
+          <div class = "input-message">
+            <form class = "box">
+              <input class = "message" type = "text" placeholder="Whats happening?"/>
+            </form>
+          </div>
+          <button class = "input-btn"><a href ="#">Falala</a></button>
+        </div>
+        <div class = "tweets">
+          <div class = "tweet-feed">
+
+          </div>
+          <div class = "tweet-feed-filter">
+            
+          </div>
+        </div>
       </section>
 
       <!-- follow trend -->
       <aside class = "follow">
         <div class = "follow-recommendation">
-          <div class = "something1">
+          <div class = "container">
+            <div class = "context">
+              <h4>Who to Follow</h4>
+              <span class = "context-divider">·</span>
+              <a href = "#"> Refresh</a>
+              <span class = "context-divider">·</span>
+              <a href = '#'> View all</a>
+            </div>
 
-          </div>
-          <div class = "something2">
+            <div class = "follower">
+              <div class = "img-icon">
+                <img class = "fw-icon" src = "../img/hiro.jpg">
+              </div>
+              <div class = "follow-me">
+                <a class = "follow-name" href = "#">
+                  Hiro Hamada
+                  <span class ="username">@IamHiro</span>
+                </a>
+                <button class = "follow-btn"><a href = "#">Follow</a></button>
+              </div>
+            </div>
 
-          </div>
-          <div class = "findpeople">
+            <div class = "follower">
+              <div class = "img-icon">
+                <img class = "disney" src = "../img/disney.png">
+              </div> 
+              <div class = "follow-me">
+                <a class = "follow-name" href = "#">
+                  Disney
+                  <span class ="username">@WaltDisneyCompany</span>
+                </a>
+                <button class = "follow-btn"><a href = "#">Follow</a></button>
+              </div>
+            </div>
 
+            <div class = "follower">
+              <div class = "img-icon">
+                <img class = "fw-icon" src = "../img/tada.jpg">
+              </div>
+              <div class = "follow-me">
+                <a class = "follow-name" href = "#">
+                  Tadashi Hamada 
+                  <span class ="username">@baymaxCreator</span>
+                </a>
+                <button class = "follow-btn"><a href = "#">Follow</a></button>
+              </div>
+            </div>
+
+            <div class = "follower">
+              <div class = "img-icon">
+                <img class = "google" src = "../img/google.png">
+              </div>
+              <div class = "follow-me">
+                <a class = "follow-name">Find people you know</a>
+                <span class = "contacts">Import your contacts from Gmail</span>
+              </div>
+            </div>
+            <div class = "follower">
+              <a href = "#">Connect other address books</a>
+            </div>
           </div>
         </div>
         <footer class = "side-nav">
@@ -164,5 +238,10 @@
         </footer> 
       </aside>
     </div>
+  <!-- JavaScript -->
+  <script src="../js/jquery.js"></script>
+  <script src="../js/moment.min.js"></script>
+  <script src="../js/fala-generator.js"></script>
+  <script src="../js/falala.js"></script>
   </body>
 </html>
