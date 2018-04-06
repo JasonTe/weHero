@@ -1,4 +1,5 @@
 $(document).ready(function(){
+  $('.logoff').hide();
   var $body = $('.tweet-feed');
   var $filterUsers = $('.tweet-feed-filter');
   $body.html('');
@@ -33,7 +34,7 @@ $(document).ready(function(){
             + '<a class = "fala-username" href = "#">' + tweet.user + '</a>' + ' <span class = "usertime">@' + tweet.user + ' ' + moment().fromNow() + '</span>' 
           +'</div>'
           +'<div class = "fala-message">'
-            + tweet.message
+            + tweet.message + '<img class = "fala-image" src = "../img/users/' + tweet.image + '.jpg">' 
           +'</div>'
        +'</div>');
     $tweetcontainer.prependTo('.tweet-feed');
@@ -52,7 +53,7 @@ $(document).ready(function(){
             + '<a class = "fala-username" href = "#">' + element['user'] + '</a>' + ' <span class = "usertime">@' + element['user'] + ' ' + element['created_at']+ '</span>' 
           +'</div>'
           +'<div class = "fala-message">'
-            + element['message']
+            + element['message'] + '<img class = "fala-image" src = "../img/users/' + element['image'] + '.jpg">' 
           +'</div>'
        +'</div>');
       falaUser.appendTo($filterUsers).fadeIn('fast');
@@ -78,6 +79,10 @@ $(document).ready(function(){
     +'</div>');
     $mymessage.prependTo($body);
     $('.message').val('');
+  });
+  // Logoff
+  $('.user-icon').on('click', function(){
+    $('.logoff').toggle();
   });
 });
 
