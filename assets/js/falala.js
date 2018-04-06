@@ -21,7 +21,7 @@ $(document).ready(function(){
     $tweetcontainer.appendTo($body);
     index -= 1;
   }
-
+  //falala generator
   setInterval(function() {
     var index = streams.home.length - 1;
     var tweet = streams.home[index];
@@ -38,8 +38,9 @@ $(document).ready(function(){
           +'</div>'
        +'</div>');
     $tweetcontainer.prependTo('.tweet-feed');
-  }, 3000);
+  }, 5000);
 
+  //filter users
   $('.fala-container').on('click','.fala-username', function(){
     var clickedUsers = $(this).text();
     $body.hide();
@@ -80,10 +81,27 @@ $(document).ready(function(){
     $mymessage.prependTo($body);
     $('.message').val('');
   });
+  //Increase number of falalas
+  var count = 0;
+  $('.input-btn').on('click', function() {
+    count++;
+    $('.falala-count').html(count);
+  });
   // Logoff
   $('.user-icon').on('click', function(){
     $('.logoff').toggle();
   });
+  //Following
+  $('.follow-btn').on('click', function(){
+    $(this).html('following');
+    $(this).css({
+      'background': '#54d3df',
+      'color': '#fff',
+      'text-transform': 'capitalize',
+      'font-weight': 'bold'
+    });
+    
+  })
 });
 
   
